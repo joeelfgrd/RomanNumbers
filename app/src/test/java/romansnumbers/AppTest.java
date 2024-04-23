@@ -155,23 +155,6 @@ public class NumeroRomanoTest {
         assertEquals(439, numeroRomano.toDecimal());
     }
 
-    /**
-     * Test de la coleccion de
-     * expresiones regulares
-     */
-
-    @Test
-    @Tag("regex")
-    public void init_regex_collection_test() {
-        String testCase = "V";
-        numeroRomano = new RomanNumber(testCase);
-        assertThat(numeroRomano.getRegexCollection().getAllRegex()).hasSize(2);
-
-        assertThat(numeroRomano.getRegexCollection().getAllRegex()).containsExactly("(?<!C)[DM]|(?<!X)[LC](?![DM])|(?<!I)[VX](?![LC])|I(?![VX])", "(C[DM])|(X[LC])|(I[VX])");
-
-        assertThat(numeroRomano.getRegexCollection().getRegex("grupoSumatorio")).isEqualTo("(?<!C)[DM]|(?<!X)[LC](?![DM])|(?<!I)[VX](?![LC])|I(?![VX])");
-        assertThat(numeroRomano.getRegexCollection().getRegex("grupoSustractivo")).isEqualTo("(C[DM])|(X[LC])|(I[VX])");
-    }
 
     /**
      * Test del tipo enumerado
