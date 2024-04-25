@@ -6,7 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import static org.assertj.core.api.Assertions.assertThat;
+
+import romansnumbers.Calculate.RomanNumber;
 
 
 // @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
